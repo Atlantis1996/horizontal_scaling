@@ -1,0 +1,95 @@
+; 2020-09-29T03:07:11+00:00
+; Horizontal Scaling Test
+; isTestingThroughCode=true
+; Test launched. Please check every minute for update.
+; Your goal is to achieve rps=50 in 30 min
+; Minimal interval of adding instances is 100 sec
+[Test]
+type=horizontal
+testId=1601348831791
+testFile=test.1601348831791.log
+startTime=2020-09-29T03:07:11+00:00
+
+[Minute 1]
+ec2-54-166-204-255.compute-1.amazonaws.com=13.81
+[Current rps=13.81]
+
+[Minute 2]
+ec2-54-166-204-255.compute-1.amazonaws.com=10.36
+[Current rps=10.36]
+
+[Minute 3]
+ec2-54-166-204-255.compute-1.amazonaws.com=11.45
+[Current rps=11.45]
+
+[Minute 4]
+ec2-54-166-204-255.compute-1.amazonaws.com=11.76
+ec2-3-89-86-23.compute-1.amazonaws.com=13.26
+[Current rps=25.02]
+
+[Minute 5]
+ec2-54-166-204-255.compute-1.amazonaws.com=11.43
+ec2-3-89-86-23.compute-1.amazonaws.com=12.43
+[Current rps=23.86]
+
+[Minute 6]
+ec2-54-166-204-255.compute-1.amazonaws.com=12.26
+ec2-3-89-86-23.compute-1.amazonaws.com=12.20
+ec2-34-238-220-172.compute-1.amazonaws.com=12.93
+[Current rps=37.39]
+
+[Minute 7]
+ec2-54-166-204-255.compute-1.amazonaws.com=13.05
+ec2-3-89-86-23.compute-1.amazonaws.com=13.33
+ec2-34-238-220-172.compute-1.amazonaws.com=10.65
+[Current rps=37.03]
+
+[Minute 8]
+ec2-54-166-204-255.compute-1.amazonaws.com=13.26
+ec2-3-89-86-23.compute-1.amazonaws.com=12.75
+ec2-34-238-220-172.compute-1.amazonaws.com=13.90
+ec2-100-26-4-212.compute-1.amazonaws.com=13.33
+[Current rps=53.24]
+
+[Load Generator]
+username=null
+platform=AWS
+instanceId=i-0c379edef1b7bd570
+instanceType=m5.large
+hostname=ec2-107-23-230-229.compute-1.amazonaws.com
+passwd=BWJ2OiEgRt9K6J49EPbSgu
+
+[Web Service 0]
+username=null
+platform=AWS
+instanceId=i-01ca11a513f4a282f
+instanceType=m5.large
+hostname=ec2-54-166-204-255.compute-1.amazonaws.com
+
+[Web Service 1]
+username=null
+platform=AWS
+instanceId=i-04620cd0160e32ed4
+instanceType=m5.large
+hostname=ec2-3-89-86-23.compute-1.amazonaws.com
+
+[Web Service 2]
+username=null
+platform=AWS
+instanceId=i-04c903b99db1d2e19
+instanceType=m5.large
+hostname=ec2-34-238-220-172.compute-1.amazonaws.com
+
+[Web Service 3]
+username=null
+platform=AWS
+instanceId=i-04d1c9729cf376b68
+instanceType=m5.large
+hostname=ec2-100-26-4-212.compute-1.amazonaws.com
+
+; MSB is validating...
+[Test End]
+endTime=2020-09-29T03:15:14+00:00
+rps=53.24
+pass=true
+[Test finished]
